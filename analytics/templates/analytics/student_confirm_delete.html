@@ -1,0 +1,19 @@
+{% extends 'analytics/base.html' %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-6">
+        <div class="card shadow border-danger">
+            <div class="card-header bg-danger text-white">Удаление студента</div>
+            <div class="card-body">
+                <p>Вы уверены, что хотите удалить студента <strong>{{ object.full_name }}</strong>? Все его оценки также будут удалены.</p>
+                <form method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Да, удалить</button>
+                    <a href="{% url 'student_list' %}" class="btn btn-secondary">Отмена</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

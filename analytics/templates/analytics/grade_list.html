@@ -1,0 +1,35 @@
+{% extends 'analytics/base.html' %}
+{% block breadcrumbs %}<li class="breadcrumb-item active">Оценки</li>{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">Журнал оценок</h2>
+ <a href="{% url 'grade_add' %}" class="btn btn-primary"><i class="bi bi-plus-lg"></i> Добавить оценку</a>
+<div class="card shadow-sm">
+    <div class="card-body p-0">
+        <table class="table table-hover mb-0">
+            <thead class="table-light">
+                <tr><th>#</th><th>Студент</th><th>Дисциплина</th><th>Оценка</th><th>Дата</th></tr>
+            </thead>
+            <tbody>
+                {% for grade in grades %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ grade.student.full_name }}</td>
+                    <td>{{ grade.subject.title }}</td>
+                    <td>
+                        {% if grade.value == 5 %}<span class="badge bg-success">5</span>
+                        {% elif grade.value == 4 %}<span class="badge bg-info">4</span>
+                        {% elif grade.value == 3 %}<span class="badge bg-warning text-dark">3</span>
+                        {% else %}<span class="badge bg-danger">2</span>{% endif %}
+                    </td>
+                    <td>{{ grade.date|date:"d.m.Y" }}</td>
+                </tr>
+                {% empty %}
+                <tr><td colspan="5" class="text-center py-4">Оценок пока нет.</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

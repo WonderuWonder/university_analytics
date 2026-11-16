@@ -1,0 +1,241 @@
+[
+  {
+    "model": "analytics.group",
+    "pk": 1,
+    "fields": {
+      "name": "о.ИЗДт 30.3/Б3-22"
+    }
+  },
+  {
+    "model": "analytics.group",
+    "pk": 2,
+    "fields": {
+      "name": "ПИ 21-1"
+    }
+  },
+  {
+    "model": "analytics.group",
+    "pk": 3,
+    "fields": {
+      "name": "БИ 22-2"
+    }
+  },
+  {
+    "model": "analytics.subject",
+    "pk": 1,
+    "fields": {
+      "title": "Бизнес-информатика"
+    }
+  },
+  {
+    "model": "analytics.subject",
+    "pk": 2,
+    "fields": {
+      "title": "Базы данных"
+    }
+  },
+  {
+    "model": "analytics.subject",
+    "pk": 3,
+    "fields": {
+      "title": "Веб-программирование"
+    }
+  },
+  {
+    "model": "analytics.subject",
+    "pk": 4,
+    "fields": {
+      "title": "Анализ данных"
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 1,
+    "fields": {
+      "full_name": "Тарасов Сергей Александрович",
+      "group": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 2,
+    "fields": {
+      "full_name": "Иванов Иван Иванович",
+      "group": 1
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 3,
+    "fields": {
+      "full_name": "Петрова Анна Сергеевна",
+      "group": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 4,
+    "fields": {
+      "full_name": "Смирнов Алексей Владимирович",
+      "group": 2
+    }
+  },
+  {
+    "model": "analytics.student",
+    "pk": 5,
+    "fields": {
+      "full_name": "Кузнецова Ольга Дмитриевна",
+      "group": 3
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 1,
+    "fields": {
+      "student": 1,
+      "subject": 1,
+      "value": 5,
+      "date": "2026-01-15"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 2,
+    "fields": {
+      "student": 1,
+      "subject": 2,
+      "value": 4,
+      "date": "2026-01-20"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 3,
+    "fields": {
+      "student": 1,
+      "subject": 3,
+      "value": 5,
+      "date": "2026-02-10"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 4,
+    "fields": {
+      "student": 1,
+      "subject": 4,
+      "value": 4,
+      "date": "2026-02-15"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 5,
+    "fields": {
+      "student": 2,
+      "subject": 1,
+      "value": 3,
+      "date": "2026-01-15"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 6,
+    "fields": {
+      "student": 2,
+      "subject": 2,
+      "value": 4,
+      "date": "2026-01-20"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 7,
+    "fields": {
+      "student": 2,
+      "subject": 3,
+      "value": 3,
+      "date": "2026-02-10"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 8,
+    "fields": {
+      "student": 2,
+      "subject": 4,
+      "value": 4,
+      "date": "2026-02-15"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 9,
+    "fields": {
+      "student": 3,
+      "subject": 1,
+      "value": 5,
+      "date": "2026-01-15"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 10,
+    "fields": {
+      "student": 3,
+      "subject": 2,
+      "value": 5,
+      "date": "2026-01-20"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 11,
+    "fields": {
+      "student": 3,
+      "subject": 3,
+      "value": 4,
+      "date": "2026-02-10"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 12,
+    "fields": {
+      "student": 4,
+      "subject": 1,
+      "value": 4,
+      "date": "2026-01-15"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 13,
+    "fields": {
+      "student": 4,
+      "subject": 2,
+      "value": 3,
+      "date": "2026-01-20"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 14,
+    "fields": {
+      "student": 5,
+      "subject": 3,
+      "value": 5,
+      "date": "2026-02-10"
+    }
+  },
+  {
+    "model": "analytics.grade",
+    "pk": 15,
+    "fields": {
+      "student": 5,
+      "subject": 4,
+      "value": 5,
+      "date": "2026-02-15"
+    }
+  }
+]

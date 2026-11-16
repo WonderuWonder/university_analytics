@@ -1,0 +1,38 @@
+{% extends 'analytics/base.html' %}
+{% block breadcrumbs %}
+<li class="breadcrumb-item"><a href="{% url 'grade_list' %}">Оценки</a></li>
+<li class="breadcrumb-item active" aria-current="page">Добавление</li>
+{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header bg-white fw-bold">Выставление оценки</div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label class="form-label">Студент</label>
+                        {{ form.student }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Дисциплина</label>
+                        {{ form.subject }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Оценка (2-5)</label>
+                        {{ form.value }}
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Дата</label>
+                        {{ form.date }}
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сохранить</button>
+                    <a href="{% url 'grade_list' %}" class="btn btn-secondary">Отмена</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
